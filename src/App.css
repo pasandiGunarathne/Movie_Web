@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+/* --- Tailwind imports are handled in index.css, not here --- */
+
+/* --- Custom properties for your theme --- */
+:root {
+  --color-primary: #030014;
+  --color-light-100: #cecefb;
+  --color-light-200: #a8b5db;
+  --color-gray-100: #9ca4ab;
+  --color-dark-100: #0f0d23;
+  --font-dm-sans: DM Sans, sans-serif;
+  --breakpoint-xs: 480px;
+  --background-image-hero-pattern: url("/hero-bg.png");
+}
+
+/* --- Custom base styles --- */
+body {
+  font-family: var(--font-dm-sans), serif;
+  background: var(--color-primary);
+  background-image: url('/BG.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+/* --- Custom utility classes --- */
+.pattern {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background-image: var(--background-image-hero-pattern);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+}
+
+.fancy-text {
+  -webkit-text-stroke: 5px rgba(206, 206, 251, 0.5);
+  font-size: 190px;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #D6C7FF, #AB8B5F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.title {
+  font-size: 3.2rem;
+}
+
+.hero {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  /* Optionally, set a max-width or width for responsiveness */
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.text-white{
+  color: white;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.movie-grid li {
+  background: rgba(20, 20, 40, 0.7);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* --- Reference: Your original Tailwind/at-rule code (commented out for v4 compatibility) --- */
+/*
+@import "tailwindcss";
+@theme { ... }
+@layer base { ... }
+@layer components { ... }
+@utility text-gradient { ... }
+@utility fancy-text { ... }
+@utility hide-scrollbar { ... }
+*/
